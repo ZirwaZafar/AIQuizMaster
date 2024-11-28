@@ -1,19 +1,21 @@
+# AI Quiz Master 🤖💡
 
-# AI Quiz Master 🤖🧠
+Welcome to **AI Quiz Master**, an interactive and engaging quiz app designed to challenge your knowledge while providing a fun experience! Test your skills with AI-generated questions and enjoy animated feedback with every answer! 🚀
 
-Welcome to **AI Quiz Master**, a dynamic, AI-powered quiz application that challenges users with engaging questions while testing their knowledge in various domains. Get ready to test your wits and sharpen your skills! 🚀
-
-![Quiz Master Animation](https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif)  
-*An engaging quiz experience with interactive AI!*
+![Quiz Animation](https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif)  
+*Interactive, fun, and dynamic quiz experience!*
 
 ---
 
 ## Features ✨
 
-- **AI-Generated Questions** 🤔: Unique and challenging quizzes.
-- **Real-time Score Tracking** 📊: Keep track of your progress with live updates.
-- **Responsive Design** 📱: Enjoy a smooth experience on any device.
-- **Engaging Animations** 🌟: Fun animations for every correct and incorrect answer.
+- **AI-Powered Questions** 🤔: Fresh and challenging questions every time.
+- **Animated Feedback** 🎉: Celebrate correct answers with lively animations.
+- **Real-time Score Updates** 📈: See your score change live.
+- **Responsive Design** 📱: Smooth performance across all devices.
+
+![Fun Animation](https://media.giphy.com/media/1BcfiGlOGXzQ07znZG/giphy.gif)  
+*Enjoy vibrant animations throughout the quiz!*
 
 ---
 
@@ -24,16 +26,19 @@ Welcome to **AI Quiz Master**, a dynamic, AI-powered quiz application that chall
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript)
 ![AI Integration](https://img.shields.io/badge/AI-Integration-purple?style=for-the-badge&logo=artificial-intelligence)
 
+![Code Animation](https://media.giphy.com/media/fAnzw6YK33jMwzp5wp/giphy.gif)
+
 ---
 
 ## How It Works 🧩
 
-1. **Start the Quiz**: Click the "Start Quiz" button to begin.
-2. **Answer the Questions**: Choose the correct option before time runs out.
-3. **Get Instant Feedback**: Enjoy animated feedback on your answers.
-4. **Track Your Score**: Watch your score update in real-time.
+1. **Start the Quiz**: Click the "Start Quiz" button.
+2. **Answer the Questions**: Select the correct answer before the timer runs out.
+3. **Receive Animated Feedback**: Fun animations for correct/incorrect answers.
+4. **Track Your Score**: See your score updated in real time.
 
-![Quiz Interface](https://via.placeholder.com/800x400?text=Quiz+Interface+Preview)
+![Scoreboard Animation](https://media.giphy.com/media/l0HlPjezGJ6Sv7mU0/giphy.gif)  
+*Watch your score climb with every correct answer!*
 
 ---
 
