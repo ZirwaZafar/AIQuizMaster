@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer-Based Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .question {
+      font-size: 1.5em;
+      margin: 20px;
+    }
+    .answers {
+      margin: 20px;
+    }
+    .answer-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .answer-btn:hover {
+      background-color: #45a049;
+    }
+    .timer {
+      font-size: 2em;
+      color: red;
+    }
+    .score {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <div class="question" id="question"></div>
+    <div class="answers" id="answers"></div>
+    <div class="timer" id="timer"></div>
+    <div class="score" id="score">Score: 0</div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What is the capital of France?",
+        answers: ["Berlin", "Madrid", "Paris", "Rome"],
+        correct: 2
+      },
+      {
+        question: "Who wrote 'Hamlet'?",
+        answers: ["Shakespeare", "Dickens", "Austen", "Twain"],
+        correct: 0
+      },
+      {
+        question: "What is 5 + 7?",
+        answers: ["10", "11", "12", "13"],
+        correct: 2
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let timer;
+    let timeLeft = 10; // 10 seconds per question
+
+    // Function to start the quiz
+    function startQuiz() {
+      showQuestion();
+      startTimer();
+    }
+
+    // Function to display the question and answers
+    function showQuestion() {
+      const questionElement = document.getElementById('question');
+      const answersElement = document.getElementById('answers');
+      const currentQ = questions[currentQuestion];
+
+      questionElement.textContent = currentQ.question;
+      answersElement.innerHTML = '';
+      currentQ.answers.forEach((answer, index) => {
+        const button = document.createElement('button');
+        button.textContent = answer;
+        button.classList.add('answer-btn');
+        button.onclick = () => checkAnswer(index);
+        answersElement.appendChild(button);
+      });
+    }
+
+    // Function to start the timer
+    function startTimer() {
+      const timerElement = document.getElementById('timer');
+      timer = setInterval(() => {
+        timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+        if (timeLeft === 0) {
+          clearInterval(timer);
+          nextQuestion();
+        }
+        timeLeft--;
+      }, 1000);
+    }
+
+    // Function to check if the selected answer is correct
+    function checkAnswer(selectedIndex) {
+      if (selectedIndex === questions[currentQuestion].correct) {
+        score++;
+        document.getElementById('score').textContent = `Score: ${score}`;
+      }
+      clearInterval(timer); // Stop the timer when an answer is selected
+      nextQuestion();
+    }
+
+    // Function to move to the next question
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        timeLeft = 10; // Reset time for next question
+        showQuestion();
+        startTimer();
+      } else {
+        alert('Quiz Completed! Your Score: ' + score);
+      }
+    }
+
+    // Start the quiz when the page loads
+    startQuiz();
+  </script>
+
+</body>
+</html>
