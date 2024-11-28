@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIQUIZMASTER</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+        }
+
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .quiz-question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-options button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .quiz-options button:hover {
+            background-color: #2980b9;
+        }
+
+        .progress-bar {
+            margin-top: 20px;
+            height: 20px;
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #2ecc71;
+            width: 0%;
+            border-radius: 12px;
+            transition: width 0.5s ease;
+        }
+
+        .score {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="quiz-question" id="question-text">What is the capital of France?</div>
+        <div class="quiz-options">
+            <button onclick="checkAnswer('A')">A) Paris</button>
+            <button onclick="checkAnswer('B')">B) London</button>
+            <button onclick="checkAnswer('C')">C) Berlin</button>
+            <button onclick="checkAnswer('D')">D) Madrid</button>
+        </div>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+        <div class="score" id="score">Score: 0</div>
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script>
+        let score = 0;
+        let totalQuestions = 5;
+        let currentQuestion = 1;
+
+        const correctAnswer = 'A'; // The correct answer for the current question
+
+        function checkAnswer(selected) {
+            if (selected === correctAnswer) {
+                score += 10;  // Award 10 points for correct answer
+                document.getElementById('feedback').textContent = "Correct! Well done!";
+                document.getElementById('feedback').style.color = "#2ecc71";  // Green color for correct
+            } else {
+                document.getElementById('feedback').textContent = "Incorrect! Try again.";
+                document.getElementById('feedback').style.color = "#e74c3c";  // Red color for incorrect
+            }
+
+            // Update the score and progress bar
+            document.getElementById('score').textContent = "Score: " + score;
+            document.getElementById('progress').style.width = (score / (totalQuestions * 10)) * 100 + "%";
+
+            // Next question after a short delay
+            setTimeout(nextQuestion, 1000);
+        }
+
+        function nextQuestion() {
+            // For now, you can loop through 5 questions. This can be extended further.
+            currentQuestion++;
+            if (currentQuestion <= totalQuestions) {
+                document.getElementById('question-text').textContent = `Question ${currentQuestion}: What is the capital of Germany?`;
+                correctAnswer = (currentQuestion === 2) ? 'C' : 'A'; // Example changing correct answer
+                document.getElementById('feedback').textContent = ""; // Reset feedback
+            } else {
+                document.getElementById('question-text').textContent = "Quiz Completed!";
+                document.getElementById('feedback').textContent = "Thank you for playing!";
+                document.getElementById('feedback').style.color = "#34495e"; // Neutral color
+            }
+        }
+
+    </script>
+
+</body>
+  </html>
