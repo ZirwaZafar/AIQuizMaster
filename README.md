@@ -7,12 +7,6 @@ Welcome to **AI Quiz Master**, an interactive and engaging quiz app designed to 
 
 ---
 
-## Features ✨
-
-- **AI-Powered Questions** 🤔: Fresh and challenging questions every time.
-- **Animated Feedback** 🎉: Celebrate correct answers with lively animations.
-- **Real-time Score Updates** 📈: See your score change live.
-- **Responsive Design** 📱: Smooth performance across all devices.
 
 ![Fun Animation](https://media.giphy.com/media/1BcfiGlOGXzQ07znZG/giphy.gif)  
 *Enjoy vibrant animations throughout the quiz!*
@@ -30,17 +24,7 @@ Welcome to **AI Quiz Master**, an interactive and engaging quiz app designed to 
 
 ---
 
-## How It Works 🧩
 
-1. **Start the Quiz**: Click the "Start Quiz" button.
-2. **Answer the Questions**: Select the correct answer before the timer runs out.
-3. **Receive Animated Feedback**: Fun animations for correct/incorrect answers.
-4. **Track Your Score**: See your score updated in real time.
-
-![Scoreboard Animation](https://media.giphy.com/media/l0HlPjezGJ6Sv7mU0/giphy.gif)  
-*Watch your score climb with every correct answer!*
-
----
 
 ## Installation & Usage 📋
 
