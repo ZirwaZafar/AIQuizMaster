@@ -5,11 +5,6 @@ Welcome to **AI Quiz Master**, an interactive and engaging quiz app designed to 
 ![Quiz Animation](https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif)  
 *Interactive, fun, and dynamic quiz experience!*
 
----
-
-
-![Fun Animation](https://media.giphy.com/media/1BcfiGlOGXzQ07znZG/giphy.gif)  
-*Enjoy vibrant animations throughout the quiz!*
 
 ---
 
